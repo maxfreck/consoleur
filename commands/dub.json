@@ -1,0 +1,12 @@
+{
+	"name" : "commands",
+	"description" : "Invocation of commands from terminfo database",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+	"targetType": "library",
+
+	"dependencies" : {
+		"consoleur:terminfo": "*",
+		"consoleur:core": "*"
+	}
+}

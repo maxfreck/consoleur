@@ -1,0 +1,12 @@
+{
+	"name" : "input",
+	"description" : "Reading events from STDIN",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+	"targetType": "library",
+
+	"dependencies" : {
+		"consoleur:core": "*",
+		"consoleur:terminfo": "*"
+	}
+}

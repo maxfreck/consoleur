@@ -1,0 +1,14 @@
+{
+	"name" : "cli",
+	"description" : "Simple command-line widgets",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+	"targetType": "library",
+
+	"dependencies" : {
+		"consoleur:core": "*",
+		"consoleur:cursor": "*",
+		"consoleur:screen": "*",
+		"consoleur:input": "*"
+	}
+}

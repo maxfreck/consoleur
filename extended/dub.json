@@ -1,0 +1,12 @@
+{
+	"name" : "extended",
+	"description" : "Extended terminal manipulation",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+	"targetType": "library",
+
+	"dependencies" : {
+		"consoleur:commands": "*",
+		"consoleur:core": "*"
+	}
+}

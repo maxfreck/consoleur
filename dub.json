@@ -1,0 +1,34 @@
+{
+	"name" : "consoleur",
+	"description" : "Basic library for POSIX terminal IO",
+	"authors" : [ "Maxim Freck" ],
+	"license" : "BOOST-1.0",
+	"copyright": "Copyright © 2017, Maxim Freck",
+
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+	"targetType": "library",
+
+	"dependencies" : {
+		"consoleur:cli": "*",
+		"consoleur:commands": "*",
+		"consoleur:core": "*",
+		"consoleur:cursor": "*",
+		"consoleur:extended": "*",
+		"consoleur:screen": "*",
+		"consoleur:style": "*",
+		"consoleur:terminfo": "*",
+		"consoleur:input": "*"
+	},
+	"subPackages": [
+		"cli/",
+		"commands/",
+		"core/",
+		"cursor/",
+		"extended/",
+		"screen/",
+		"style/",
+		"terminfo/",
+		"input/"
+	]
+}

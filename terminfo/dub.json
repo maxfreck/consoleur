@@ -1,0 +1,10 @@
+{
+	"name" : "terminfo",
+	"description" : "Terminfo database reader",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+	"targetType": "library",
+
+	"dependencies" : {
+	}
+}
