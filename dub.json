@@ -1,6 +1,6 @@
 {
 	"name" : "consoleur",
-	"description" : "Basic library for POSIX terminal IO",
+	"description" : "Basic package for interaction with character-oriented (POSIX) terminal emulators",
 	"authors" : [ "Maxim Freck" ],
 	"license" : "BOOST-1.0",
 	"copyright": "Copyright © 2017, Maxim Freck",
