@@ -612,10 +612,12 @@ class Terminfo
 		parseStrings(offsets, stringtable);
 		fileStatus = TerminfoStatus.stringsLoaded;
 
-//		if (f.tell != f.size) {
-//			if (f.tell % 2) f.seek(1, SEEK_CUR);
-//			readExtendedData(f);
-//		}
+/+ <TODO>
+		if (f.tell != f.size) {
+			if (f.tell % 2) f.seek(1, SEEK_CUR);
+			readExtendedData(f);
+		}
+</TODO> +/
 		fileStatus = TerminfoStatus.loaded;
 	}
 
@@ -630,7 +632,8 @@ class Terminfo
 			strings[cast(CapString)n] = cast(string)stringtable[start .. end];
 		}
 	}
-/+
+
+/+ <TODO>
 	protected void readExtendedData(File f)
 	{
 		import std.stdio;
@@ -685,11 +688,8 @@ class Terminfo
 		foreach (str; strings) {
 			writefln("%s = %s", names[id++], str);
 		}
-
-
 	}
-
-+/
+</TODO> +/
 
 	/*******
 	 * Returns: terminfo load status
