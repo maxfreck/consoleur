@@ -83,7 +83,7 @@ private pure nothrow void reverse(T, size_t n)(ref T[n] a) @safe @nogc
 
 /*******
  * Reads variable of type T from a file in the little endian format.
- * Returns: true if the system is big endan, false otherwise.
+ * Returns: variable of type T in the little endian format.
  */
 auto get(T)(File f) @safe if (isScalarType!(T))
 {
@@ -108,7 +108,7 @@ auto get(T)(File f) @safe if (isScalarType!(T))
 
 /*******
  * Reads array of variables of type T from a file in the little endian format.
- * Returns: true if the system is big endan, false otherwise.
+ * Returns: array of variables of type T in the little endian format.
  */
 T[] get(T)(File f, size_t size) @safe if (isScalarType!(T))
 {
