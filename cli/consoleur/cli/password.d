@@ -15,7 +15,7 @@ module consoleur.cli.password;
  *
  * Returns: Password
  */
-string getPassword(string prompt, dchar mask = '•') @trusted
+string getPassword(string prompt = "Password: ", dchar mask = '•', int maxLength = 0) @trusted
 {
 	import consoleur.cli.util: delchar, utf8length;
 	import consoleur.core.termparam: setTermparam, Term;
@@ -31,11 +31,6 @@ string getPassword(string prompt, dchar mask = '•') @trusted
 
 	while (true) {
 		auto code = getKeyPressed();
-		if (code.type == KeyType.ASCII || code.type == KeyType.UTF8) {
-			ret ~= cast(string)(code);
-			write(mask);
-			stdout.flush;
-		}
 
 		if (code.type == KeyType.COMMAND && code.content.code == Command.del && ret.length > 0) {
 			ret = ret.delchar;
@@ -52,6 +47,14 @@ string getPassword(string prompt, dchar mask = '•') @trusted
 		}
 
 		if (code.type == KeyType.COMMAND && code.content.code == Command.lineFeed) break;
+
+		if (maxLength > 0 && ret.length == maxLength) continue;
+
+		if (code.type == KeyType.ASCII || code.type == KeyType.UTF8) {
+			ret ~= cast(string)(code);
+			write(mask);
+			stdout.flush;
+		}
 	}
 
 	flushStdin();
