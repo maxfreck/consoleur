@@ -104,7 +104,7 @@ public Point getCursorPosition() @trusted
 
 	immutable tparam = setTermparam(Term.quiet|Term.raw);
 
-	write("\x1b[6n");
+	rawStdout("\x1b[6n");
 
 	auto csi = readEscapeSequence();
 	if (csi.length <3 ) return Point(-1, -1);
