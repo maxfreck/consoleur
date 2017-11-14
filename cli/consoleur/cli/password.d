@@ -15,7 +15,7 @@ module consoleur.cli.password;
  *
  * Returns: Password
  */
-string getPassword(string prompt = "Password: ", dchar mask = '•', int maxLength = 0) @trusted
+string getPassword(string prompt = "Password: ", int maxLength = 0, dchar mask = '•') @trusted
 {
 	import consoleur.cli.util: delchar, utf8length;
 	import consoleur.core.termparam: setTermparam, Term;
